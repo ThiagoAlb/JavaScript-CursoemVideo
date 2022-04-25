@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+</head>
+<body>
+    <script>
+        /*
+        var nome = window.prompt(`Qual o seu nome? `)
+        var n1 = Number(window.prompt('Qual sua primeira nota? '))
+        var n2 = Number(window.prompt('Qual sua segunda nota? '))
+        media = (n1 + n2) / 2
+        window.alert(`Olá, ${nome}!\nSua primeira nota foi ${n1.toFixed(3)} e sua segunda nota foi ${n2.toFixed(3).replace('.', ',')}. A média final foi ${Number(media).toFixed(3).replace('.', ',')}`)
+        */
+        /*
+        var nome = window.prompt('Qual o seu nome? ')
+        window.alert(`Olá, ${nome}!\nSeu nome maiúsculo é assim: ${nome.toLocaleUpperCase()}\nSeu nome minúsculo é assim: ${nome.toLocaleLowerCase()}\nSeu nome tem ${nome.length} letras.`)
+        */
+        
+        var nome = window.prompt(`Olá! Qual o seu nome? `)
+        var salario = Number(window.prompt(`Digite o valor do seu salário: `))
+        var transp = Number(window.prompt(`Quantos dias você trabalhou este mês? `))
+        vtransp = transp * 4.1
+        var total = salario + vtransp
+        var totalDolar = total / 4.67
+        var totalEuro = total / 5.02
+        window.alert(`${nome}, seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e o valor do seu vale transporte é de ${vtransp.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.\nO valor total que receberá este mês será de ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}\nO valor do seu salário em dolares é de ${totalDolar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}\nSe recebesse em Euro o valor seria de ${totalEuro.toLocaleString('pt-BR', {style:'currency', currency: 'EUR'})}`)
+    </script>
+</body>
+</html>

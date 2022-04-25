@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao003</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: blanchedalmond;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 180px;
+        }
+        
+        input#botao {
+            background-color: green;
+            color: white;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        div#resultado {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando IMC</h1>
+    <input type="number" name="peso" id="peso" placeholder="Peso (ex: 76)"> + 
+    <input type="number" name="altura" id="altura" placeholder="Altura (ex: 1.76)">
+    <input type="button" value="Calcular" id='botao' onclick="calcular()">
+    <div id="resultado">Resultado</div>
+    <script>
+        function calcular() {
+            var valorPeso = window.document.getElementById('peso') // Posso utilizar querySelector ou getElementBy
+            var valorAltura = window.document.getElementById('altura') 
+            var resultado = window.document.querySelector('div#resultado')
+            var peso = Number(valorPeso.value)
+            var altura = Number(valorAltura.value)
+            var imc = peso / (altura**2)
+            resultado.innerHTML = `O seu peso é ${peso}kg e a sua altura é ${altura}m, então o valor do seu IMC é igual a ${imc.toFixed(2).replace('.',',')}`
+        }
+    </script>
+</body>
+</html>

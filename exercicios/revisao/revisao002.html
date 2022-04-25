@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#caixa {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            font: bold 18pt Arial;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        Interaja...
+    </div>
+    
+    
+    <script>
+        /*
+        var nome = window.prompt(`Olá! Qual o seu nome? `)
+        var peso = Number(window.prompt(`Qual o seu peso? `))
+        var altura = Number(window.prompt(`Por favor, informe sua altura: `))
+        var imc = peso / (altura)**2
+        window.alert(`Foi um prazer te conhecer, ${nome}. O valor do seu IMC é de ${imc.toFixed(3).replace('.',',')}.`)
+        */
+        var a = window.document.getElementById('caixa')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.backgroundColor = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.backgroundColor = 'blue'
+            a.style.color = 'white'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.backgroundColor = 'yellow'
+            a.style.color = 'black'
+        }
+        
+    </script>
+</body>
+</html>

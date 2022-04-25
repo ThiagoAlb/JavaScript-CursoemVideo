@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao006</title>
+    <style>
+
+        body {
+            background-color: blanchedalmond;
+            font: normal 18pt Arial;
+            margin: auto;
+            text-align: center;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        input#botao {
+            padding: 8px;
+            background-color: green;
+            color: white;
+            font: bold 12pt Arial;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        body p  {
+            display: inline-block;
+            margin: 0 2rem;
+        }
+
+        div {
+           margin: 20px 
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando cotação do dolar</h1>
+    <input type="number" name="real" id="real" placeholder="Quantos reais?">
+    <p>x</p>
+    <p>U$$ 4,86</p>
+    <input type="button" value="Calcular" id="botao" onclick="calcular()">
+    <div id="resultado"><p>Valor em dolares</p></div>
+    <script>
+        function calcular() {
+            var moeda = window.document.getElementById('real')
+            var dolar = 4.86
+            var resultado = window.document.querySelector('div#resultado')
+            var real = Number(moeda.value)
+            var cotacao = real / dolar
+            resultado.innerHTML = `O valor em dolares é de <strong>U$$${cotacao.toFixed(2).replace('.',',')}</strong>`
+        }
+
+    </script>
+    
+</body>
+</html>

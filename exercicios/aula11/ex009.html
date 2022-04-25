@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Sistema Imigratório</h1>
+    Digite seu país de origem: <input type="text" name="txtnacionalidade" id="txtnacionalidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resposta">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtnac = window.document.getElementById('txtnacionalidade')
+            var resultado = window.document.querySelector('div#resposta')
+            var nacionalidade = String(txtnac.value)
+            resultado.innerHTML = `<p>Você é nacional do(a) <strong>${nacionalidade}</strong></p>`
+
+            if (nacionalidade == 'Brasil') {
+                resultado.innerHTML += `<p>Por ter nascido no ${nacionalidade} você é brasileiro.</p>`
+            }else {
+            resultado.innerHTML += `<p>Por ter nascido no(a) ${nacionalidade} você é estrangeiro.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

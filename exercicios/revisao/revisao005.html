@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div#caixa {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            font: bold 18pt Arial;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <p>Não clique</p>
+    </div>
+
+    <script>
+        var transicao = window.document.getElementById('caixa')
+        transicao.addEventListener('click', clicar)
+        transicao.addEventListener('mouseenter', entrar)
+        transicao.addEventListener('mouseout', sair)
+
+        function clicar() {
+            transicao.innerText = 'Falei para não clicar!'
+            transicao.style.backgroundColor = 'red'
+            transicao.style.color = 'black'
+            transicao.style.fontSize = '12pt'
+            transicao.style.fontWeight = '900'
+        }
+
+        function entrar() {
+            transicao.innerHTML = 'Olá! Não Clica'
+            transicao.style.backgroundColor = 'yellow'
+            transicao.style.color = 'black'
+        }
+
+        function sair() {
+            transicao.innerText = 'Não clica mais!'
+            transicao.style.backgroundColor = 'blue'
+            transicao.style.color = 'white'
+            transicao.style.fontWeight = '900'
+        }
+
+
+    </script>
+</body>
+</html>

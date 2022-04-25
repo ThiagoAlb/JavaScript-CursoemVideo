@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão004</title>
+</head>
+<body>
+
+    <script>
+        /*
+        var nome = window.prompt('Olá! Qual o seu nome?')
+        var nomePet = window.prompt('Qual o nome do seu Pet?')
+        var idade = window.prompt(`Qual a idade de ${nomePet}?`)
+        window.alert(`Confirmando as informações...\nSeu nome é ${nome}.\nO nome do seu Pet é ${nomePet} e a idade dele é ${idade} anos.`)
+        */
+        
+        var agora = new Date()
+        var horaAgora = agora.getHours()
+
+
+        if (horaAgora < 12) {
+            var saudacao = 'Bom dia!'
+        } else if (horaAgora < 18) {
+            var saudacao = 'Boa tarde!'
+        } else if (horaAgora <= 23) {
+            var saudacao = 'Boa noite!'
+        }
+
+        var nome = window.prompt(`${saudacao}! Qual o seu nome?`)
+        var reais = Number(window.prompt('Quantos reais você deseja transferir para o exterior?'))
+
+        var dolares = reais / 4.86
+
+        window.alert(`Certo, ${nome}. Você deseja transferir R$ ${reais} para o exterior.\n Este valor convertido para doláres gera um valor de U$$ ${dolares.toFixed(2).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}).replace('.',',')}`)
+        
+
+    </script>
+
+</body>
+</html>
