@@ -5,6 +5,6 @@ function contar () {
     var res = window.document.getElementById('res')
 
     for (var inicio = inicio; inicio <= fim; passa++) {
-        res.innerHTML = ``
+        res.innerHTML = `${passa}`
     }
 }
